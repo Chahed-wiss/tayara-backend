@@ -11,6 +11,7 @@ exports.details = async(req , res)=>{
 }
 
 exports.ajouter = async(req , res)=>{
+    console.log(req.body)
     const resultat = new Utilisateur(req.body)
     resultat.save().then((success)=>{
 

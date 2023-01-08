@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const serveur = express()
 // pour accepter le bosy json du requete http
 serveur.use(express.json())
+serveur.use(express.static('./'))
 
 //connection au serveur de la base de données
 mongoose.set('strictQuery', false);
@@ -31,6 +32,8 @@ Api :
 */
 
 require('./apis')(serveur)
+
+
 
 
 // 4 - Lancement du serveur
